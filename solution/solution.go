@@ -93,6 +93,9 @@ func readSize() (int, int) {
 // readStartAndFinish returns start and finish Points
 func readStartAndFinish() (Point, Point) {
 	nums := readIntArray()
+	if len(nums) < 4 {
+		log.Fatalln("Error in write start and finish points")
+	}
 	start := Point{nums[0], nums[1]}
 	finish := Point{nums[2], nums[3]}
 	return start, finish
